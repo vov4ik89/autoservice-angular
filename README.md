@@ -26,4 +26,3 @@ The project based on N-Tier architecture:
 2. Run the command: `mvn clean package -DskipTests`
 3. After that enter the command: `docker-compose up`
 4. Now you can test the program in your browser: http://localhost:8080/api/swagger-ui.html
-# autoservice-angular
