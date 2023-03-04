@@ -1,0 +1,25 @@
+databaseChangeLog:
+  - include:
+      file: /db/changelog/changes/create-commodities-table.sql
+  - include:
+      file: /db/changelog/changes/create-owners-table.sql
+  - include:
+      file: /db/changelog/changes/create-cars-table.sql
+  - include:
+      file: /db/changelog/changes/create-orders-table.sql
+  - include:
+      file: /db/changelog/changes/create-masters-table.sql
+  - include:
+      file: /db/changelog/changes/create-favors-table.sql
+  - include:
+      file: /db/changelog/changes/create-masters_completed_orders-table.sql
+  - include:
+      file: /db/changelog/changes/create-orders_commodities-table.sql
+  - include:
+      file: /db/changelog/changes/create-orders_favors-table.sql
+  - include:
+      file: /db/changelog/changes/create-owners_cars-table.sql
+  - include:
+      file: /db/changelog/changes/create-owners_orders-table.sql
+  - include:
+      file: /db/changelog/changes/insert-default-favors-price.sql
