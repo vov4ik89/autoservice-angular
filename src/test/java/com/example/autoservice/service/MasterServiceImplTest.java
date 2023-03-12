@@ -23,8 +23,6 @@ class MasterServiceImplTest {
     private MasterServiceImpl masterService;
     @Mock
     private MasterRepository masterRepository;
-    @Mock
-    private FavorService favorService;
 
     @Test
     void calculateSalary() {
