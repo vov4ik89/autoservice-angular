@@ -1,0 +1,16 @@
+.example-spacer {
+  background-color: Green;
+}
+
+.btn {
+  background-color: Green;
+  border: green;
+  color: white;
+  padding: 16px 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: green;
+}

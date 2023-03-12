@@ -17,7 +17,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class OrderServiceImpl implements OrderService {
     private static final double COMMODITY_DISCOUNT = 0.01;
-    private static final double MAINTENANCE_DISCOUNT = 0.02;
+    private static final double FAVOR_DISCOUNT = 0.02;
     private final MasterService masterService;
     private final OrderRepository orderRepository;
     private final OwnerService ownerService;
@@ -97,7 +97,7 @@ public class OrderServiceImpl implements OrderService {
     private BigDecimal calculatePriceAfterDiscount(Order order) {
         int amountOrders = order.getCar().getOwner().getOrders().size();
         double commodityDiscount = amountOrders * COMMODITY_DISCOUNT;
-        double maintenanceDiscount = amountOrders * MAINTENANCE_DISCOUNT;
+        double maintenanceDiscount = amountOrders * FAVOR_DISCOUNT;
         BigDecimal commodityPriceAfterDiscount = order.getCommodities().stream()
                 .map(Commodity::getPrice)
                 .reduce(BigDecimal.ZERO, BigDecimal::add)
