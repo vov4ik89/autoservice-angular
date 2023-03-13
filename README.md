@@ -26,7 +26,7 @@ The project based on N-Tier architecture:
 
 
 **Instruction to run the Backend** 📄
-1. Run the command: `mvn clean package -DskipTests`
+1. Run the command in the backend directory: `mvn clean package -DskipTests`
 2. After that enter the command: `docker-compose up`
 3. Now you can test the program in your browser: http://localhost:8080/api/swagger-ui.html
 
