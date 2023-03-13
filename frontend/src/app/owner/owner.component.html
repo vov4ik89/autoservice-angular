@@ -1,0 +1,36 @@
+<label>
+  <div class="box">
+    <h1 class="title">
+      SAVE OWNER
+    </h1>
+    <form [formGroup]="reactiveForm" (ngSubmit)="save()" novalidate>
+      <div class="from-group">
+        <label class="text">Name:</label>
+        <input type="text" class="input form-control" formControlName="name" placeholder="name" ngModel>
+      </div>
+      <button class="btn" type="submit">SAVE</button>
+    </form>
+  </div>
+  <div class="box">
+    <h1 class="title">
+      GET ALL ORDERS BY OWNER ID
+    </h1>
+    <form [formGroup]="idForm" (ngSubmit)="getAllOrderById()" novalidate>
+      <div>
+        <label class="text">Owner id:</label>
+        <input type="number" class="input" formControlName="id" placeholder="id" ngModel>
+      </div>
+      <button class="btn" type="submit">GET</button>
+    </form>
+  </div>
+  <div class="item" *ngFor="let order of orders">
+    id:{{order.id}}<br>
+    description:{{order.description}}<br>
+    carId:{{order.carId}}<br>
+    acceptDate:{{order.acceptDate}}
+  </div>
+  <div class="item" *ngFor="let owner of owners">
+    &nbsp;&nbsp;&nbsp;id:{{owner.id}}<br>
+    &nbsp;&nbsp;&nbsp;name:{{owner.name}}<br>
+  </div>
+</label>

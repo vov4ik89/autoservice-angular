@@ -1,0 +1,56 @@
+<label>
+  <div class="box">
+    <h1 class="title">
+      ADD MASTER
+    </h1>
+    <form [formGroup]="masterForm" (ngSubmit)="save()" novalidate>
+      <div>
+        <label class="text">Name:</label>
+        <input type="text" class="input form-control" formControlName="name" placeholder="name" ngModel>
+      </div>
+      <button class="btn" type="submit">SAVE</button>
+    </form>
+  </div>
+  <div class="box">
+    <h1 class="title">
+      GET COMPLETED ORDERS
+    </h1>
+    <form [formGroup]="masterIdForm" (ngSubmit)="getOrder()" novalidate>
+      <div class="from-group">
+        <label class="text">Master id:</label>
+        <input type="number" class="input form-control" formControlName="id" placeholder="id" ngModel>
+      </div>
+      <button class="btn" type="submit">GET</button>
+    </form>
+  </div>
+  <div class="box">
+    <h1 class="title">
+      GET MASTER'S SALARY
+    </h1>
+    <form [formGroup]="salaryForm" (ngSubmit)="getSalary()" novalidate>
+      <div class="from-group">
+        <label class="text">Master id:</label>
+        <input type="number" class="input form-control" formControlName="masterId" placeholder="master id" ngModel>
+      </div>
+      <div class="from-group">
+        <label class="text">Order id:</label>
+        <input type="number" class="input form-control" formControlName="orderId" placeholder="order id" ngModel>
+      </div>
+      <div>
+        <label class="text">Salary:</label>
+        <input type="number" class="show" [value]="salary" readonly>
+      </div>
+      <button class="btn" type="submit">GET</button>
+    </form>
+  </div>
+  <div class="item" *ngFor="let order of orders">
+    id:{{order.id}}<br>
+    carId:{{order.carId}}<br>
+    problem:{{order.description}}<br>
+    date:{{order.acceptDate}}
+  </div>
+  <div class="item" *ngFor="let master of masters">
+    id:{{master.id}}<br>
+    name:{{master.name}}<br>
+  </div>
+</label>
