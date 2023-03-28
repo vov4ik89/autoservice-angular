@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/car-owners")
+@RequestMapping("/owners")
 public class OwnerController {
     private final OwnerService ownerService;
     private final OwnerMapper ownerMapper;

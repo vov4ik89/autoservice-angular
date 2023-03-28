@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/maintenances")
+@RequestMapping("/favors")
 public class FavorController {
     private final FavorService favorService;
     private final FavorMapper favorMapper;
